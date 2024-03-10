@@ -1,6 +1,10 @@
 import createRequest from './createRequest';
 
 export default class Entity {
+  constructor(entityPath) {
+    this.entityPath = entityPath;
+  }
+
   list() {
     return createRequest({
       method: 'GET',
