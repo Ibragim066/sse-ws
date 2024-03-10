@@ -1,7 +1,6 @@
-import Chat from './Chat';
+import Modal from './Modal/Modal';
 
-const root = document.getElementById('root');
+const chatContainer = document.querySelector('.chat-container');
+const modal = new Modal(chatContainer);
 
-const app = new Chat(root);
-
-app.init();
+modal.init();

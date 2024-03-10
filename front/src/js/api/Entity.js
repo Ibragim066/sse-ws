@@ -1,11 +1,40 @@
+import createRequest from './createRequest';
+
 export default class Entity {
-  list() { }
+  list() {
+    return createRequest({
+      method: 'GET',
+      path: `/${this.entityPath}`,
+    });
+  }
 
-  get() { }
+  get(id) {
+    return createRequest({
+      method: 'GET',
+      path: `/${this.entityPath}/${id}`,
+    });
+  }
 
-  create() { }
+  create(data) {
+    return createRequest({
+      method: 'POST',
+      path: `/${this.entityPath}`,
+      data,
+    });
+  }
 
-  update() { }
+  update(id, data) {
+    return createRequest({
+      method: 'PUT',
+      path: `/${this.entityPath}/${id}`,
+      data,
+    });
+  }
 
-  delete() { }
+  delete(id) {
+    return createRequest({
+      method: 'DELETE',
+      path: `/${this.entityPath}/${id}`,
+    });
+  }
 }
