@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 20px;
+}
+
+.chat-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+button {
+  background-color: #ecb5b5;
+  border: none;
+  border-radius: 10px;
+  color: rgb(34, 33, 33);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+button:focus {
+  background-color: #742c2c;
+  border: 2px solid rgb(228, 82, 82);
+  color: whitesmoke;
+}
+
+button:hover {
+  border: 2px solid rgb(184, 123, 123);
+}
